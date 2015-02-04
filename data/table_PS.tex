@@ -1,0 +1,50 @@
+
+\documentclass[10pt]{article}
+\usepackage{multirow, array, booktabs, longtable}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\usepackage{geometry} 
+\geometry{tmargin=1cm, bmargin=1cm, lmargin=1cm, rmargin=1cm} 
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{longtable}{lrP{5cm}rP{7cm}}
+
+\caption{$^{13}$C-cellulose (complex mixture) responders BLAST against Living Tree Project} \\
+\toprule \\
+    \textbf{OTU ID} & \textbf{Fold change} & \textbf{Top BLAST hits} & \textbf{BLAST \%ID} & \textbf{Phylum;Class;Order} \\
+\midrule
+\endfirsthead
+
+\multicolumn{3}{c}
+{{\tablename\ \thetable{} -- continued from previous page}} \\
+\midrule
+    \textbf{OTU ID} & \textbf{Fold change} & \textbf{Top BLAST hits} & \textbf{BLAST \%ID} & \textbf{Phylum;Class;Order} \\
+\midrule
+\endhead
+    OTU.465 & 2.32 & \mbox{\textit{Ohtaekwangia kribbensis}} & 92.73 & \mbox{\textit{Bacteroidetes}} \mbox{\textit{Cytophagia}} \mbox{\textit{Cytophagales}} \\ \midrule
+OTU.4322 & 2.48 & {No hits of at least 90\% identity} & 89.14 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
+OTU.98 & 2.32 & {No hits of at least 90\% identity} & 88.18 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
+OTU.64 & 2.08 & {No hits of at least 90\% identity} & 89.5 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
+OTU.120 & 1.92 & \mbox{\textit{Vampirovibrio chlorellavorus}} & 94.52 & \mbox{\textit{Cyanobacteria}} \mbox{\textit{SM1D11}} \mbox{\textit{uncultured-bacterium}} \\ \midrule
+OTU.484 & 2.15 & {No hits of at least 90\% identity} & 89.09 & \mbox{\textit{Planctomycetes}} \mbox{\textit{Planctomycetacia}} \mbox{\textit{Planctomycetales}} \\ \midrule
+OTU.285 & 1.91 & \mbox{\textit{Blastopirellula marina}} & 90.87 & \mbox{\textit{Planctomycetes}} \mbox{\textit{Planctomycetacia}} \mbox{\textit{Planctomycetales}} \\ \midrule
+OTU.119 & 2.0 & \mbox{\textit{Brevundimonas alba}} & 100.0 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Caulobacterales}} \\ \midrule
+OTU.766 & 2.04 & \mbox{\textit{Devosia insulae}} & 99.54 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
+OTU.1087 & 1.9 & \mbox{\textit{Devosia soli}}, \mbox{\textit{Devosia crocina}}, \mbox{\textit{Devosia riboflavina}} & 99.09 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
+OTU.633 & 1.95 & {No hits of at least 90\% identity} & 89.5 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
+OTU.185 & 2.45 & {No hits of at least 90\% identity} & 85.14 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.266 & 2.16 & {No hits of at least 90\% identity} & 83.64 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.541 & 2.15 & {No hits of at least 90\% identity} & 84.23 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.1023 & 2.0 & {No hits of at least 90\% identity} & 80.54 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.83 & 2.45 & \mbox{\textit{Luteolibacter sp. CCTCC AB 2010415}} & 97.72 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Verrucomicrobiae}} \mbox{\textit{Verrucomicrobiales}} \\ \midrule
+OTU.638 & 2.09 & \mbox{\textit{Luteolibacter sp. CCTCC AB 2010415}}, \mbox{\textit{Luteolibacter algae}} & 93.61 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Verrucomicrobiae}} \mbox{\textit{Verrucomicrobiales}} \\ \midrule
+
+\bottomrule
+\label{tab:cell}
+\end{longtable}
+ 
+\end{document}
