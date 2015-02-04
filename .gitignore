@@ -3,3 +3,5 @@ data/*.fa
 data/*.fastq
 data/*.fq
 **tmp
+table_PS.*
+table_SS.*
