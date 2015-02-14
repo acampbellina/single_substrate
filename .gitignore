@@ -1,3 +1,4 @@
+**.ipynb_checkpoints
 data/*.fasta
 data/*.fa
 data/*.fastq
