@@ -2,17 +2,18 @@
 \documentclass[10pt]{article}
 \usepackage{multirow, array, booktabs, longtable}
 \usepackage{array}
+\usepackage{enumitem}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \usepackage{geometry} 
 \geometry{tmargin=1cm, bmargin=1cm, lmargin=1cm, rmargin=1cm} 
 
 \begin{document}
+\setcounter{table}{1}
 
 \thispagestyle{empty}
 
-\begin{longtable}{lrP{5cm}rP{7cm}}
-
+\setlength{LTcapwidth}{5.2in}
 \caption{$^{13}$C-cellulose (complex mixture) responders BLAST against Living Tree Project} \\
 \toprule \\
     \textbf{OTU ID} & \textbf{Fold change} & \textbf{Top BLAST hits} & \textbf{BLAST \%ID} & \textbf{Phylum;Class;Order} \\
