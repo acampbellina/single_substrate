@@ -1,43 +1,63 @@
 
 \documentclass[10pt]{article}
-\usepackage{multirow, array, booktabs, longtable}
+\usepackage{multirow, array, booktabs, longtable, threeparttablex}
 \usepackage{array}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\counterwithin{table}{section}
 \usepackage[margin=1cm]{caption}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\usepackage[paperheight=20in]{geometry} 
-\geometry{tmargin=1cm, bmargin=1cm, lmargin=1cm, rmargin=1cm} 
+\usepackage{geometry} 
+\geometry{tmargin=1cm, bmargin=1cm, lmargin=0.25cm, rmargin=0.25cm} 
 
 \begin{document}
+\setcounter{table}{1}
+\setcounter{section}{3}
 
-\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item[a] Maximum observed $log_{2}$ of fold change. 
+\item[b] Against Living Tree Project database.
+\item[c] Annotation from Silva database assigned during OTU binning (see methods).
+\end{TableNotes}
 
 \begin{longtable}{lrP{5cm}rP{7cm}}
 
-\caption{$^{13}$C-cellulose (only) responders BLAST against Living Tree Project} \\
-\toprule \\
-    \textbf{OTU ID} & \textbf{Fold change} & \textbf{Top BLAST hits} & \textbf{BLAST \%ID} & \textbf{Phylum;Class;Order} \\
+\caption{$^{13}$C-cellulose responders in the simple treatment} \\
+\toprule 
+    \textbf{OTU ID} & 
+    \textbf{Fold change} \tnote{a} &  
+    \textbf{Top BLAST hits} \tnote{b}& 
+    \textbf{BLAST \%ID} \tnote{b}& 
+    \textbf{Phylum;Class;Order} \tnote{c}\\
 \midrule
 \endfirsthead
 
 \multicolumn{3}{c}
 {{\tablename\ \thetable{} -- continued from previous page}} \\
 \midrule
-    \textbf{OTU ID} & \textbf{Fold change} & \textbf{Top BLAST hits} & \textbf{BLAST \%ID} & \textbf{Phylum;Class;Order} \\
+    \textbf{OTU ID} & 
+    \textbf{Fold change} & 
+    \textbf{Top BLAST hits} & 
+    \textbf{BLAST \%ID} & 
+    \textbf{Phylum;Class;Order} \\
 \midrule
 \endhead
-    OTU.569 & 2.15 & {No hits of at least 90\% identity} & 84.16 & \mbox{\textit{Acidobacteria}} \mbox{\textit{Candidatus-Solibacter}} \mbox{\textit{uncultured-bacterium}} \\ \midrule
-OTU.382 & 2.98 & {No hits of at least 90\% identity} & 89.19 & \mbox{\textit{Bacteroidetes}} \mbox{\textit{Cytophagia}} \mbox{\textit{Cytophagales}} \\ \midrule
+    OTU.569 & 2.15 & {No hits of at least 95\% identity} & 84.16 & \mbox{\textit{Acidobacteria}} \mbox{\textit{Candidatus-Solibacter}} \mbox{\textit{uncultured-bacterium}} \\ \midrule
+OTU.382 & 2.98 & {No hits of at least 95\% identity} & 89.19 & \mbox{\textit{Bacteroidetes}} \mbox{\textit{Cytophagia}} \mbox{\textit{Cytophagales}} \\ \midrule
 OTU.525 & 1.9 & \mbox{\textit{Cytophaga hutchinsonii ATCC 33406}} & 98.63 & \mbox{\textit{Bacteroidetes}} \mbox{\textit{Cytophagia}} \mbox{\textit{Cytophagales}} \\ \midrule
-OTU.64 & 2.78 & {No hits of at least 90\% identity} & 89.5 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
-OTU.98 & 2.56 & {No hits of at least 90\% identity} & 88.18 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
-OTU.4322 & 2.26 & {No hits of at least 90\% identity} & 89.14 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
-OTU.285 & 2.52 & \mbox{\textit{Blastopirellula marina}} & 90.87 & \mbox{\textit{Planctomycetes}} \mbox{\textit{Planctomycetacia}} \mbox{\textit{Planctomycetales}} \\ \midrule
+OTU.64 & 2.78 & {No hits of at least 95\% identity} & 89.5 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
+OTU.98 & 2.56 & {No hits of at least 95\% identity} & 88.18 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
+OTU.4322 & 2.26 & {No hits of at least 95\% identity} & 89.14 & \mbox{\textit{Chloroflexi}} \mbox{\textit{Herpetosiphonales}} \mbox{\textit{Herpetosiphonaceae}} \\ \midrule
+OTU.285 & 2.52 & {No hits of at least 95\% identity} & 90.87 & \mbox{\textit{Planctomycetes}} \mbox{\textit{Planctomycetacia}} \mbox{\textit{Planctomycetales}} \\ \midrule
 OTU.766 & 2.36 & \mbox{\textit{Devosia insulae}} & 99.54 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
 OTU.206 & 2.31 & \mbox{\textit{Anderseniella baltica}} & 95.89 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
 OTU.73 & 1.95 & \mbox{\textit{Mesorhizobium temperatum}}, \mbox{\textit{Mesorhizobium caraganae}}, \mbox{\textit{Mesorhizobium robiniae}}, \mbox{\textit{Mesorhizobium gobiense}}, \mbox{\textit{Mesorhizobium sp. Ala-3}}, \mbox{\textit{Mesorhizobium tarimense}}, \mbox{\textit{Mesorhizobium tianshanense}}, \mbox{\textit{Mesorhizobium metallidurans}}, \mbox{\textit{Mesorhizobium mediterraneum}} & 100.0 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
 OTU.19 & 1.86 & \mbox{\textit{Rhizobium alamii}}, \mbox{\textit{Rhizobium mesosinicum}}, \mbox{\textit{Rhizobium mongolense}}, \mbox{\textit{Arthrobacter viscosus}}, \mbox{\textit{Rhizobium sullae}}, \mbox{\textit{Rhizobium yanglingense}}, \mbox{\textit{Rhizobium loessense}} & 99.54 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
-OTU.263 & 1.77 & \mbox{\textit{Anderseniella baltica}} & 94.06 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
+OTU.263 & 1.77 & {No hits of at least 95\% identity} & 94.06 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Rhizobiales}} \\ \midrule
 OTU.89 & 2.62 & \mbox{\textit{Sphingomonas trueperi}}, \mbox{\textit{Sphingomonas sp.}}, \mbox{\textit{Sphingomonas pituitosa}}, \mbox{\textit{Caulobacter leidyia}} & 100.0 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Sphingomonadales}} \\ \midrule
 OTU.1414 & 1.87 & \mbox{\textit{Sphingomonas kaistensis}} & 97.72 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Sphingomonadales}} \\ \midrule
 OTU.38 & 1.82 & \mbox{\textit{Kaistobacter terrae}} & 100.0 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Sphingomonadales}} \\ \midrule
@@ -45,19 +65,21 @@ OTU.17 & 1.79 & \mbox{\textit{Sphingomonas sp. 382}} & 97.72 & \mbox{\textit{Pro
 OTU.20 & 1.66 & \mbox{\textit{Sphingomonas jaspsi}} & 98.17 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Sphingomonadales}} \\ \midrule
 OTU.2294 & 1.65 & \mbox{\textit{Kaistobacter sp. Gsoil 634}} & 97.26 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Alphaproteobacteria}} \mbox{\textit{Sphingomonadales}} \\ \midrule
 OTU.114 & 3.01 & \mbox{\textit{Herbaspirillum sp. SUEMI03}}, \mbox{\textit{Herbaspirillum sp. SUEMI10}}, \mbox{\textit{Oxalicibacterium solurbis}}, \mbox{\textit{Herminiimonas fonticola}}, \mbox{\textit{Oxalicibacterium horti}} & 100.0 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Betaproteobacteria}} \mbox{\textit{Burkholderiales}} \\ \midrule
-OTU.5680 & 2.83 & \mbox{\textit{Chondromyces robustus}} & 90.05 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
-OTU.169 & 2.39 & \mbox{\textit{Kofleria flava}} & 92.27 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
-OTU.442 & 1.85 & \mbox{\textit{Chondromyces robustus}} & 92.24 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
+OTU.5680 & 2.83 & {No hits of at least 95\% identity} & 90.05 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
+OTU.169 & 2.39 & {No hits of at least 95\% identity} & 92.27 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
+OTU.442 & 1.85 & {No hits of at least 95\% identity} & 92.24 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Deltaproteobacteria}} \mbox{\textit{Myxococcales}} \\ \midrule
 OTU.6 & 2.78 & \mbox{\textit{Cellvibrio fulvus}} & 100.0 & \mbox{\textit{Proteobacteria}} \mbox{\textit{Gammaproteobacteria}} \mbox{\textit{Pseudomonadales}} \\ \midrule
 OTU.945 & 1.71 & \mbox{\textit{Turneriella parva}} & 99.54 & \mbox{\textit{Spirochaetes}} \mbox{\textit{Spirochaetales}} \mbox{\textit{Leptospiraceae}} \\ \midrule
-OTU.400 & 2.76 & {No hits of at least 90\% identity} & 83.64 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Candidatus-Methylacidiphilum}} \mbox{\textit{uncultured-bacterium}} \\ \midrule
-OTU.185 & 3.26 & {No hits of at least 90\% identity} & 85.14 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
-OTU.266 & 3.14 & {No hits of at least 90\% identity} & 83.64 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
-OTU.2192 & 3.12 & {No hits of at least 90\% identity} & 83.56 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
-OTU.541 & 2.85 & {No hits of at least 90\% identity} & 84.23 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.400 & 2.76 & {No hits of at least 95\% identity} & 83.64 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Candidatus-Methylacidiphilum}} \mbox{\textit{uncultured-bacterium}} \\ \midrule
+OTU.185 & 3.26 & {No hits of at least 95\% identity} & 85.14 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.266 & 3.14 & {No hits of at least 95\% identity} & 83.64 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.2192 & 3.12 & {No hits of at least 95\% identity} & 83.56 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
+OTU.541 & 2.85 & {No hits of at least 95\% identity} & 84.23 & \mbox{\textit{Verrucomicrobia}} \mbox{\textit{Spartobacteria}} \mbox{\textit{Chthoniobacterales}} \\ \midrule
 
 \bottomrule
-\label{tab:cell}
+\insertTableNotes
 \end{longtable}
+
+\end{ThreePartTable}
  
 \end{document}
