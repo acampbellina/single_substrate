@@ -11,3 +11,4 @@ table_PS.*
 table_SS.*
 ._*
 .DS_Store
+**.Rhistory
